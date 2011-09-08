@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VraiMVC</title>
+	<meta charset="utf-8">
+ 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+	<script src="./lib/ejs/ejs_production.js"></script>	
+    <script src="./lib/vraiMVC.min.js"></script>	
+         
+    <link rel="stylesheet" href="./resources/css/main.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            
+        <div id="container">
+            <div id="left">
+            <div id="inputContainer">
+	
+		<form>
+		    <div class="tool"><input type="text" id="TodoNameInput" placeholder="my effing cool TODO"></div>
+		    <div class="tool"><input type="submit" id="button" value="Todo!"></div>
+		</form>
+            </div>
+	    <div id="todoDoneContainer"></div>
+            </div>
+            <div id="right">
+                        <div id="todoContainer"></div>
+
+            </div>
+            </div>
+		<div id="footer">
+			
+	    </div>
+	 
+        </div>
+        <script src="./model/Todo.js"></script>
+		<script src="./model/TodoStats.js"></script>
+        <script src="./controller/MainController.js"></script>
+        <script src="./view/Todo.js"></script>
+        <script src="./view/TodoStats.js"></script>
+
+        <script>
+ 	 $(function(){
+            Controller.init();
+	
+         })
+        </script>
+
+    </body>
+</html>
